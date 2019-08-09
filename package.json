@@ -1,0 +1,25 @@
+{
+  "name": "widget_autoloader",
+  "version": "1.0.0",
+  "description": "Widget autoloading for amoCRM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "amoCRM",
+    "widgets",
+    "CRM",
+    "JavaScript",
+    "Gulp"
+  ],
+  "author": "Sergey Kasatikov",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-bump": "^3.1.3",
+    "gulp-zip": "^5.0.0"
+  },
+  "dependencies": {
+    "form-data": "^2.5.0"
+  }
+}
