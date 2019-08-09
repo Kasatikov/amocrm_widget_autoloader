@@ -33,8 +33,11 @@ var gulp = require('gulp'),
         body += chunk;
       });
       response.on('end', function () {
-        if (body.indexOf('{"response":true}')) {
+        if (body.indexOf('{"response":true}') > -1) {
           console.log('Widget successfully uploaded');
+        }
+        else {
+          console.log(body);
         }
       });
       cb();
