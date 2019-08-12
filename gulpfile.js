@@ -19,6 +19,10 @@ var gulp = require('gulp'),
       .pipe(gulp.dest('./'));
   });
 
+  gulp.task('watch', function() {
+    gulp.watch(['widget/**/*.js'], {events: ['change', 'add', 'unlink']}, gulp.series('bumpWidgetVersion', 'zipWidget', 'uploadWidget'));
+  });
+
   gulp.task('uploadWidget', function(cb) {
     var widget_form = new FormData(),
         body = '';
@@ -50,6 +54,7 @@ gulp.task('default',
   (
     'bumpWidgetVersion',
     'zipWidget',
-    'uploadWidget'
+    'uploadWidget',
+    'watch'
   )
 );
